@@ -6,7 +6,7 @@ For several examples working on the whole Amazon region we had several very simi
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/LandscapeGeoinformatics/lc_metrics_resources/master?filepath=interactive-example.ipynb)
 
-Most importanly Python packages: `numpy`, `scipy`, `pandas`, `gdal`,`rasterio` and for emailing `sendgrid` (see examplary `conda` requirements.txt export)
+Most importanly Python packages: `numpy`, `scipy`, `pandas`, `gdal`,`rasterio` and for emailing `sendgrid` (see examplary `conda`-based `environment.yml` file)
 
 In each example folder there are several scripts that make up the experiment: a shell script (`calc_lcmodel_stats_test.sh` and `run.sh`) for sending calculation to background process via e.g. the Unix/Linux `nohup` command. Then the main python script (`second_stats_amz_prode_yearly.py` and `stats_runner.py` scripts respectively) that imports `lcmodel` and prepares and loads the raster into the required labelled numpy array structure. Also the metrics are selected in the main scripts. Finally, calculated metrics are collated into a `pandas` dataframe and saved into a .csv file.
 For emailsending after a long-running calculation on Google Cloud platform we used `sendgrid`, as shown in the `demo_send_email.py` script, which would be invoked after the main Python script via the shell script. For that you need an own API key in the line `sg = sendgrid.SendGridAPIClient("xxx")`
