@@ -5,6 +5,7 @@ Collection of scripts to compute large scale landscape metrics.
 For several examples working on the whole Amazon region we had several very similar scirpt and running configurations.
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/LandscapeGeoinformatics/lc_metrics_resources/master?filepath=interactive-example.ipynb)
+[![DOI](https://zenodo.org/badge/214106161.svg)](https://zenodo.org/badge/latestdoi/214106161)
 
 Most importanly Python packages: `numpy`, `scipy`, `pandas`, `gdal`,`rasterio` and for emailing `sendgrid` (see examplary `conda`-based `environment.yml` file)
 
